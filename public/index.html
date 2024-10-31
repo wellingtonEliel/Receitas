@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas Culinárias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Receitas Culinárias</h1>
+    </header>
+
+    <main>
+        <section id="nova-receita">
+            <h2>Adicionar Receita</h2>
+            <input type="text" id="nome" placeholder="Nome da receita">
+            <input type="text" id="ingredientes" placeholder="Ingredientes (separados por vírgula)">
+            <textarea id="preparo" placeholder="Modo de Preparo"></textarea>
+            <button onclick="adicionarReceita()">Adicionar Receita</button>
+        </section>
+
+        <section id="lista-receitas">
+            <h2>Lista de Receitas</h2>
+            <div id="receitas-container"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #181818; /* Fundo escuro */
+    color: #f1f1f1; /* Texto claro */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #ff3b30; /* Vermelho vibrante */
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Limitar a largura do cabeçalho */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Container principal para receitas e formulário */
+#container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Estilo para adicionar receitas */
+#nova-receita {
+    background-color: #292929; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    width: 300px; /* Largura fixa para o formulário */
+    transition: transform 0.3s;
+}
+
+/* Hover effect para adicionar receitas */
+#nova-receita:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo para a lista de receitas */
+#lista-receitas {
+    background-color: #292929; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    flex-grow: 1; /* Ocupa o espaço restante */
+    max-height: 400px; /* Limitar a altura da lista */
+    overflow-y: auto; /* Scroll se necessário */
+    transition: transform 0.3s;
+}
+
+/* Hover effect para lista de receitas */
+#lista-receitas:hover {
+    transform: scale(1.02);
+}
+
+/* Estilo dos inputs e textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff3b30; /* Vermelho vibrante */
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+    background-color: #1f1f1f; /* Fundo escuro */
+    color: #f1f1f1; /* Texto claro */
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #ff1f1f; /* Vermelho mais escuro no foco */
+    outline: none;
+}
+
+/* Estilo do botão */
+button {
+    background-color: #ff3b30; /* Vermelho para adicionar */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ff1f1f; /* Vermelho mais escuro ao passar o mouse */
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Estilo da receita individual */
+.receita {
+    background-color: #383838; /* Fundo das receitas */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.receita:hover {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos títulos das receitas */
+.receita h3 {
+    margin: 10px 0;
+    color: #ff3b30; /* Cor vibrante para os títulos */
+}
+
+/* Estilo para textos em destaque */
+strong {
+    color: #f1f1f1; /* Texto claro */
+}
+
+/* Estilo do botão de deletar */
+button.deletar {
+    background-color: #dc3545; /* Vermelho para deletar */
+}
+
+button.deletar:hover {
+    background-color: #c82333; /* Cor mais escura ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; /* Muda para coluna em telas menores */
+    }
+
+    #nova-receita {
+        width: 100%; /* Largura total em telas menores */
+    }
+
+    #lista-receitas {
+        width: 100%; /* Largura total em telas menores */
+        max-height: none; /* Remove o limite de altura em telas menores */
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "name": "receitas-api",
+    "version": "1.0.0",
+    "description": "API para gerenciar uma coleção de receitas culinárias",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "Wellington Oliveira",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.21.1"
+    },
+    "keywords": []
+}
